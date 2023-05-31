@@ -3,10 +3,12 @@ package com.example.helloworld;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
 @RestController
 public class HelloWorldController {
     @GetMapping("/hello")
-    public String hello(){
-        return "Hello Hirakawa";
+    public LocalDateTime date1(){
+        return LocalDateTime.now();
     }
 }
